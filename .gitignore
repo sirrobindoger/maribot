@@ -2,3 +2,5 @@
 node_modules/
 dat/
 yark.lock
+.env
+package-lock.json
