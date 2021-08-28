@@ -12,7 +12,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
 	if (!user.bot) {
 		const msg = reaction.message;
 		msg.reactions.cache.map(messagereaction => {
-			if (messagereaction.count == 2 && (messagereaction.emoji instanceof Discord.GuildEmoji) && !cache.includes(msg.id) && !unstarable_channels.includes(msg.channel.id)) {
+			if (messagereaction.count == 6 && (messagereaction.emoji instanceof Discord.GuildEmoji) && !cache.includes(msg.id) && !unstarable_channels.includes(msg.channel.id)) {
 				// handle posting to highlight channel
 				const content = msg.attachments.map(attach => (attach.url));
 				const embed = new Discord.MessageEmbed()
