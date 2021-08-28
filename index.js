@@ -3,7 +3,9 @@ const mcrcon = require("minecraft-server-util");
 const cache = require("./star.json");
 const fs = require('fs');
 require('dotenv').config()
-const client = new Discord.Client()
+const client = new Discord.Client({
+	disableMentions:"everyone"
+})
 const rcon = new mcrcon.RCON(process.env.HOST, { port: 25575, enableSRV: true, timeout: 5000, password: process.env.RCON_PASS }); // These are the default options
 
 const unstarable_channels = ["880995806251991110", "840590757555339276", "840590726512640032", "840590695755415572", "840590481288200212", "816031441250156565"]
